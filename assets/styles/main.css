@@ -1,0 +1,154 @@
+/*
+**  Global and resets */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Helvetica;
+}
+.container {
+  background: linear-gradient(#0071cf, #001639);
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+main,
+header,
+footer {
+  background: #fff;
+  display: block;
+  margin: 0 30px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+}
+
+/*
+**  Header & Navigation */
+header img {
+  padding: 20px;
+}
+nav {
+  font-family: 'Dosis', sans-serif;
+  background: #000;
+  text-transform: uppercase;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+}
+nav a:hover {
+  background: #bebebe;
+}
+nav li.active {
+  background: #0071cf;
+}
+
+/*
+**  Main */
+main {
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+main article {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: inline-block;
+  order: 2;
+}
+main section {
+  display: inline-block;
+  width: 50%;
+  max-width: 200px;
+  height: 200px;
+  vertical-align: top;
+  text-align: center;
+  margin-bottom: 50px;
+}
+main img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100px;
+}
+main .flex {
+  justify-content: space-between;
+}
+main figure {
+  margin: 0;
+  margin: 30px;
+  flex-direction: column;
+  font-weight: bold;
+  height: 100%;
+  justify-content: space-between;
+}
+main p {
+  margin: 10px 0 0;
+}
+main a {
+  cursor: pointer;
+}
+
+/*
+**  Aside */
+aside {
+  order: 1;
+  background: #f3f3f3;
+  padding: 30px;
+}
+aside p {
+  color: #666;
+}
+aside a {
+  color: #0071cf;
+  display: inline-block;
+  padding: 10px 0 0;
+}
+
+/*
+**  Footer */
+footer {
+  color: #333;
+  text-align: center;
+  background: #bebebe;
+}
+footer small {
+  display: inline-block;
+  padding: 20px 0 50px;
+}
+
+/*
+**  Tablet+ overrides */
+@media screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+  main article {
+    order: 1;
+  }
+  main section {
+    width: 25%;
+  }
+  aside {
+    order: 2;
+  }
+}
